@@ -11,11 +11,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Let's play!
+          spotify-game
         </h1>
 
         <p className={styles.description}>
-          _____________________________
+          Which tracks would you like to play on?
         </p>
 
         <div className={styles.grid}>
