@@ -19,7 +19,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="/TODO" className={styles.card}>
+          <a href="/my-top" className={styles.card}>
             <h3>Your top tracks</h3>
             <p>Music you've been listening to recently</p>
           </a>
