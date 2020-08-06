@@ -2,6 +2,14 @@
 
 A quiz game based on audio features of your most played music on spotify.
 
+## Run
+```bash
+git clone <THIS_REPO>
+cd spotify-game
+npm install
+yarn dev
+```
+
 ## References
 - [Spotify Web API reference](https://developer.spotify.com/documentation/web-api/reference/)
 - [Spotify Web API libraries](https://developer.spotify.com/documentation/web-api/libraries/)
