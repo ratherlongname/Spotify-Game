@@ -10,4 +10,4 @@ A quiz game based on audio features of your most played music on spotify.
 ## TODO
 - [x] Decide scope of MVP
 - [x] Set up nextjs project
-- [ ] Get generic music data from Spotify
+- [ ] Get top tracks from Spotify
