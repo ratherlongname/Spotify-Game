@@ -19,7 +19,7 @@ yarn dev
 - [x] Decide scope of MVP
 - [x] Set up nextjs project
 - [x] Get top tracks from Spotify
+- [ ] Fetch all relevant song data (cover art, acoustic info, name)
 - [ ] Use Axios for all backend get/post requests
 - [ ] Move all spotify facing functions to separate file
 - [ ] Move all cookie related functions to separate file
-- [ ] Fetch all relevant song data (cover art, acoustic info, name)
