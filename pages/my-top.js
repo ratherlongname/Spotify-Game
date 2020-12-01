@@ -1,5 +1,5 @@
-import https from 'https'
 import cookie from 'cookie'
+import axios from 'axios'
 
 export default function MyTop() {
     return (
@@ -14,25 +14,21 @@ export async function getServerSideProps({req, res}) {
         if(cookies['at']) {
             console.log("access_token found");
 
-            https.get("https://api.spotify.com/v1/me/top/tracks", {
-                headers: {
-                    Authorization: "Bearer " + cookies['at']
+            axios.get("https://api.spotify.com/v1/me/top/tracks",
+                {
+                    headers: {
+                        Authorization: "Bearer " + cookies['at']
+                    }
                 }
-            }, (res) => {
-                let body = "";
-                res.on("data", (chunk) => {
-                    body += chunk;
-                });
-
-                res.on("end", () => {
-                    try {
-                        let json = JSON.parse(body);
-                        console.log(json);
-                        // do something with JSON
-                    } catch (error) {
-                        console.error(error.message);
-                    };
-                })
+            )
+            .then((resp) => {
+                console.log(resp.data);
+                console.log(resp.status);
+            })
+            .catch((error) => {
+                console.log("error getting top tracks")
+                console.log(error)
+                res.writeHead(302, {location: "/error"}).end();
             })
         }
         else if(cookies['rt']) {
